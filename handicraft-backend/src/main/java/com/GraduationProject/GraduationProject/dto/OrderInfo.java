@@ -1,0 +1,13 @@
+package com.GraduationProject.GraduationProject.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderInfo {
+    Long productId;
+    String quantity;
+}

@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+}
+
+:root {
+    /* --main-color: #007bff; */
+    --orange-color: #F88D2F;
+    --yellow-color: #d9cc1b;
+    --darkBlue-color:#001F4F;
+}
+
+.sidebare {
+    box-shadow: 0 0 10px #ddd;
+    z-index: 10;
+    /* min-height: 3000px; */
+    position: sticky;
+    top: 60px;
+    padding: 10px;
+    width: 200px;
+}
+.admin.sidebare {
+    width: 220px;
+    background-color: #FFF681;
+
+}
+
+
+.description {
+    border: 2px solid #eee;
+    /* background-color: #FFF681; */
+}
+
+.tabs {
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.sidebare .tabs {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+
+.sidebare .tabs:hover {
+    background-color: var(--orange-color);
+    color: white;
+        transition: 0.3s;
+}
+
+
+.sidebare .active-tab {
+    /* font-weight: bold; */
+    background-color: var(--orange-color);
+    color: white;
+    transition: 0.3s;
+}
+
+.content {
+    display:none
+}
+.active-content{
+    display: block;
+}
+
+.follow {
+    right: 10px;
+    bottom: -15px;
+    background-color: blueviolet;
+    color: white;
+    padding: 4px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 30;
+}
+
+.profile {
+    background-color: gray;
+    border-radius: 50%;
+}
+.big-p {
+    height: 110px;
+    width: 110px;
+}
+.small-p {
+    height: 40px;
+    width: 40px;
+}
+
+.stat {
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+.stat:not(:last-child)::after {
+    content:"";
+    background-color: black;
+    color: black;
+    height: 80%;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* transform: translateX(-50%); */
+}
+
+.stat span {
+    font-weight: bold;
+}
+
+
+.product {
+    width: 30%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 5%;
+    justify-content: start;
+}
+
+.product .image {
+    height: 250px;
+}
+.product .image img {
+    height: 100%;
+    width: 100%;
+}
+
+.craftsmanLogup {
+    height: 500px;
+    width: 420px;
+}
+.clientLogup {
+    height: 500px;
+    width: 420px;
+}
+.craftsmanLogup img,
+.clientLogup img{
+max-height: 100%;
+transition: 0.3s;
+}
+
+
+.clientLogup  .img ,
+.craftsmanLogup  .img {
+    overflow: hidden;
+}
+
+.clientLogup img:hover ,
+.craftsmanLogup img:hover{
+    transform: scale(1.1) rotate(3deg);
+}
+
+.login {
+    width: 900px;
+    margin-top: 20px;
+}
+
+.login .image img{
+    max-height: 100%;
+}
+.login .image {
+    height: 500px;
+    width: fit-content;
+}
+
+.loginForm {
+    width: 400px;
+}
+
+.searchInput {
+    width: 400px;
+    padding: 7px 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+}
+.searchInput:focus {
+    outline: 1px solid rgb(19, 175, 222);
+}
+
+
+.slideContainer {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideContent {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+}
+.slideContent.active {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.slideContent img.slideOne {
+    width: 100%;
+    height: 400px;
+}
+
+.slideIcon {
+    position: absolute;
+    z-index: 100;
+    color: white;
+    font-size: 60px;
+    top: 50%;
+    transform: translatey(-50%);
+    margin: auto;
+}
+.slideIcon .left {
+    margin-left: 20px;
+}
+.slideIcon .right {
+    margin-right: 20px;
+}
+
+.filterProducts {
+    background-color: #001F4F;
+    margin-top: 30px;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
